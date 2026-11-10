@@ -1,25 +1,24 @@
 <!doctype html>
 <html lang="uk">
   <head>
-    <!-- Кодування, масштабування на мобільних пристроях і мова сторінки. -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- SEO-опис сторінки та колір браузерного інтерфейсу. -->
     <meta
       name="description"
-      content="NeighborCraft допомагає орендувати інструменти поруч із домом без витрат на купівлю та безпечно здавати власне обладнання."
+      content="Орендуй перфоратор Bosch GBH 2-26 у сусіда поруч з домом. Забронюй онлайн за хвилину, оплата та застава під захистом Escrow."
     />
     <meta name="theme-color" content="#121212" />
-    <!-- Open Graph-метадані для коректного прев’ю в соціальних мережах. -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="uk_UA" />
-    <meta property="og:title" content="NeighborCraft — інструменти поруч" />
+    <meta
+      property="og:title"
+      content="NeighborCraft — перфоратор Bosch поруч"
+    />
     <meta
       property="og:description"
-      content="Оренда інструментів біля дому з безпекою Escrow."
+      content="Забронюй перфоратор Bosch GBH 2-26 у сусіда з безпекою Escrow."
     />
-    <title>NeighborCraft — оренда інструментів поруч</title>
-    <!-- Іконка вкладки та підключення Tailwind Play CDN. -->
+    <title>NeighborCraft — оренда перфоратора Bosch поруч</title>
     <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
@@ -27,7 +26,6 @@
     id="top"
     class="min-h-screen overflow-x-hidden bg-[#F4F3EE] font-sans text-[#121212] antialiased"
   >
-    <!-- Skip-link дає клавіатурним користувачам швидкий перехід до основного вмісту. -->
     <a
       href="#main-content"
       class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:p-3 focus:text-[#121212] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
@@ -35,18 +33,17 @@
       Перейти до основного вмісту
     </a>
 
-    <!-- Sticky-шапка з логотипом, основною навігацією та мобільним меню. -->
+    <!-- Шапка з логотипом, навігацією та мобільним меню. -->
     <header
       class="sticky top-0 z-50 border-b border-[#E5E7EB] bg-white/95 backdrop-blur-md"
     >
       <div
         class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8"
       >
-        <!-- Логотип повертає користувача на початок сторінки. -->
         <a
           href="#top"
           class="inline-flex min-h-[44px] items-center rounded-lg text-lg font-extrabold tracking-tight focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
-          aria-label="NeighborCraft — на головну"
+          aria-label="NeighborCraft — на початок"
         >
           <span
             class="mr-2 inline-block h-3 w-3 rounded-full bg-[#00E676]"
@@ -55,16 +52,10 @@
           NeighborCraft
         </a>
 
-        <!-- Навігація для екранів від середнього розміру. -->
         <nav
           class="hidden items-center gap-6 text-sm font-medium md:flex"
           aria-label="Головна навігація"
         >
-          <a
-            href="#catalog"
-            class="inline-flex min-h-[44px] items-center rounded-lg px-1 hover:text-[#176B3A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
-            >Каталог</a
-          >
           <a
             href="#how-it-works"
             class="inline-flex min-h-[44px] items-center rounded-lg px-1 hover:text-[#176B3A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
@@ -80,23 +71,22 @@
             class="inline-flex min-h-[44px] items-center rounded-lg px-1 hover:text-[#176B3A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
             >Відгуки</a
           >
+          <a
+            href="#contacts"
+            class="inline-flex min-h-[44px] items-center rounded-lg px-1 hover:text-[#176B3A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
+            >Контакти</a
+          >
         </nav>
 
-        <!-- Основні дії користувача в шапці. -->
         <div class="flex items-center gap-2">
           <a
-            href="#login"
-            class="hidden min-h-[44px] items-center justify-center rounded-xl px-4 text-sm font-semibold hover:bg-[#F4F3EE] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2 sm:inline-flex"
-            >Увійти</a
-          >
-          <a
-            href="#list-tool"
-            class="inline-flex min-h-[44px] items-center justify-center rounded-xl bg-[#00E676] px-3 py-2 text-xs font-bold text-[#121212] shadow-sm transition-all duration-200 ease-in-out hover:bg-[#33EB91] hover:shadow-md active:bg-[#00C853] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2 sm:px-5 sm:py-2.5 sm:text-sm"
-            >+ Здати в оренду</a
+            href="#booking"
+            class="inline-flex min-h-[44px] items-center justify-center rounded-xl bg-[#00E676] px-4 py-2 text-sm font-bold text-[#121212] shadow-sm transition-all duration-200 ease-in-out hover:bg-[#33EB91] hover:shadow-md active:bg-[#00C853] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2 sm:px-5"
+            >Забронювати</a
           >
         </div>
 
-        <!-- Деталі/summary використовуються як доступне мобільне меню без JavaScript. -->
+        <!-- Мобільне меню без JavaScript. -->
         <details class="relative md:hidden">
           <summary
             class="inline-flex min-h-[44px] min-w-[44px] cursor-pointer list-none items-center justify-center rounded-xl border border-gray-200 text-[#121212] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
@@ -118,11 +108,6 @@
             aria-label="Мобільна навігація"
           >
             <a
-              href="#catalog"
-              class="flex min-h-[44px] items-center rounded-lg px-3 hover:bg-[#F4F3EE] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
-              >Каталог</a
-            >
-            <a
               href="#how-it-works"
               class="flex min-h-[44px] items-center rounded-lg px-3 hover:bg-[#F4F3EE] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
               >Як це працює</a
@@ -138,118 +123,193 @@
               >Відгуки</a
             >
             <a
-              href="#list-tool"
-              class="mt-2 flex min-h-[44px] items-center justify-center rounded-xl bg-[#00E676] px-3 font-bold text-[#121212] shadow-sm transition-all duration-200 ease-in-out hover:bg-[#33EB91] hover:shadow-md active:bg-[#00C853] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
-              >+ Здати в оренду</a
+              href="#contacts"
+              class="flex min-h-[44px] items-center rounded-lg px-3 hover:bg-[#F4F3EE] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
+              >Контакти</a
             >
           </nav>
         </details>
       </div>
     </header>
 
-    <!-- Основний контент лендингу. -->
     <main id="main-content">
-      <!-- Hero: ціннісна пропозиція, пошук інструментів та ілюстрація. -->
+      <!-- Hero: товар і форма бронювання поруч. -->
       <section
-        class="mx-auto grid max-w-7xl items-center gap-6 px-4 py-6 sm:px-6 sm:py-12 lg:grid-cols-2 lg:gap-12 lg:px-8 lg:py-20"
+        class="mx-auto grid max-w-7xl items-start gap-8 px-4 py-8 sm:px-6 sm:py-12 lg:grid-cols-2 lg:gap-12 lg:px-8 lg:py-16"
         aria-labelledby="hero-title"
       >
         <div>
-          <!-- Короткий позиціонувальний підзаголовок. -->
           <p
             class="mb-4 inline-flex rounded-full bg-[#D9FBE8] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[#176B3A]"
           >
-            ІНСТРУМЕНТИ ПОРУЧ — МОЖЛИВОСТІ ДЛЯ КОЖНОГО
+            Інструмент поруч — оренда за хвилину
           </p>
-          <!-- Головний заголовок сторінки для SEO та ієрархії контенту. -->
           <h1
             id="hero-title"
-            class="max-w-2xl text-2xl font-extrabold leading-tight tracking-tight text-[#121212] sm:text-4xl lg:text-5xl"
+            class="max-w-2xl text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl"
           >
-            Орендуй потрібні інструменти поруч або заробляй на власних
+            Перфоратор Bosch GBH 2-26 — орендуй у сусіда
           </h1>
-          <p
-            class="mt-2 max-w-xl text-base leading-relaxed text-[#595959] sm:mt-4"
-          >
-            Не купуй те, що потрібно лише на день. Знайди інструмент у сусіда,
-            орендуй безпечно та заощаджуй.
+          <p class="mt-4 max-w-xl text-base leading-relaxed text-[#595959]">
+            Не купуй інструмент заради одного ремонту. Забронюй на потрібні дати
+            та забери його поруч з домом.
           </p>
-          <!-- Форма пошуку інструментів за районом. -->
-          <form
-            action="#catalog"
-            method="get"
-            class="mt-5 max-w-xl rounded-2xl border border-[#E5E7EB] bg-white p-4 shadow-sm sm:mt-8 sm:p-5"
-            aria-label="Пошук інструментів"
+
+          <div
+            class="relative mt-6 h-64 overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white shadow-sm sm:h-80"
           >
-            <label for="district" class="mb-2 block text-sm font-bold"
-              >Обери район</label
-            >
-            <div class="flex flex-col gap-3 sm:flex-row">
-              <select
-                id="district"
-                name="district"
-                class="min-h-[44px] min-w-0 flex-1 rounded-xl border border-[#E5E7EB] bg-white px-3 text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
-              >
-                <option value="">Обери район</option>
-                <option value="central">Центральний</option>
-                <option value="north">Північний</option>
-                <option value="west">Західний</option>
-                <option value="sykhiv">Сихівський</option>
-              </select>
-              <button
-                type="submit"
-                class="inline-flex min-h-[44px] w-full items-center justify-center rounded-xl bg-[#00E676] px-5 font-bold text-[#121212] shadow-sm transition-all duration-200 ease-in-out hover:bg-[#33EB91] hover:shadow-md active:bg-[#00C853] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2 sm:w-auto"
-              >
-                Знайти інструмент
-              </button>
+            <img
+              src="assets/images/bosch-gbh-2-26.jpg"
+              alt="Перфоратор Bosch GBH 2-26 у чорному кейсі"
+              width="600"
+              height="320"
+              class="h-full w-full object-contain p-4"
+              decoding="async"
+            />
+          </div>
+
+          <dl
+            class="mt-6 grid grid-cols-3 gap-3 text-center"
+            aria-label="Умови оренди"
+          >
+            <div class="rounded-2xl border border-[#E5E7EB] bg-white p-4">
+              <dt class="text-xs text-[#595959]">Ціна</dt>
+              <dd class="mt-1 text-lg font-extrabold">450 ₴ / доба</dd>
             </div>
-          </form>
+            <div class="rounded-2xl border border-[#E5E7EB] bg-white p-4">
+              <dt class="text-xs text-[#595959]">Застава</dt>
+              <dd class="mt-1 text-lg font-extrabold">1000 ₴</dd>
+            </div>
+            <div class="rounded-2xl border border-[#E5E7EB] bg-white p-4">
+              <dt class="text-xs text-[#595959]">Відстань</dt>
+              <dd class="mt-1 text-lg font-extrabold">250 м</dd>
+            </div>
+          </dl>
+          <p class="mt-3 text-sm text-[#595959]">
+            Центральний район · Рейтинг
+            <span class="text-[#8A5A00]" role="img" aria-label="5 з 5"
+              >★★★★★</span
+            >
+          </p>
         </div>
 
-        <!-- Декоративна hero-плашка з ілюстрацією інструментів. -->
+        <!-- Форма бронювання (без JavaScript). -->
         <div
-          class="relative flex min-h-[220px] items-center justify-center overflow-hidden rounded-[2rem] bg-[#DCECDD] p-4 sm:min-h-[320px] sm:p-8"
-          role="img"
-          aria-label="Ілюстрація сусідського обміну інструментами"
+          id="booking"
+          class="scroll-mt-24 rounded-2xl border border-[#E5E7EB] bg-white p-5 shadow-lg sm:p-7 lg:sticky lg:top-24"
         >
-          <div
-            class="absolute left-5 top-6 rounded-full bg-white px-3 py-2 text-xs font-bold shadow-sm sm:left-10 sm:top-10"
-          >
-            Інструменти поруч
-          </div>
-          <div
-            class="relative flex h-64 w-64 rotate-[-6deg] items-center justify-center rounded-[2rem] border-4 border-white bg-[#B7D9BC] shadow-xl sm:h-72 sm:w-72"
-          >
-            <div
-              class="absolute -left-8 top-10 flex h-28 w-20 rotate-12 items-center justify-center rounded-xl bg-[#121212] text-5xl shadow-lg"
-              aria-hidden="true"
-            >
-              🔨
-            </div>
-            <div
-              class="absolute -right-7 bottom-8 flex h-24 w-20 -rotate-12 items-center justify-center rounded-xl bg-[#00E676] text-5xl shadow-lg"
-              aria-hidden="true"
-            >
-              🪚
-            </div>
-            <div
-              class="rounded-2xl bg-white/80 px-5 py-4 text-center shadow-sm"
-            >
-              <span class="block text-3xl" aria-hidden="true">🛠️</span>
-              <span class="mt-2 block text-sm font-extrabold"
-                >NeighborCraft</span
-              >
-            </div>
-          </div>
-          <p
-            class="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap text-sm font-bold text-[#1D382B] sm:bottom-7"
-          >
-            Позичай поруч. Створюй більше.
+          <h2 class="text-2xl font-extrabold">Забронювати перфоратор</h2>
+          <p class="mt-1 text-sm text-[#595959]">
+            Заповни дані, і власник підтвердить бронь.
           </p>
+
+          <form
+            action="mailto:support@neighborcraft.ua?subject=Бронювання перфоратора Bosch GBH 2-26"
+            method="post"
+            enctype="text/plain"
+            class="mt-6 space-y-4"
+          >
+            <div>
+              <label for="name" class="mb-1 block text-sm font-bold"
+                >Ім'я</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="Ім'я"
+                autocomplete="name"
+                minlength="2"
+                placeholder="Наприклад, Вероніка"
+                class="min-h-[44px] w-full rounded-xl border border-[#E5E7EB] bg-white px-3 text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="phone" class="mb-1 block text-sm font-bold"
+                >Телефон</label
+              >
+              <input
+                type="tel"
+                id="phone"
+                name="Телефон"
+                autocomplete="tel"
+                pattern="[0-9+\s()\-]{10,}"
+                title="Введи номер телефону, наприклад +380 67 123 45 67"
+                placeholder="+380 __ ___ __ __"
+                class="min-h-[44px] w-full rounded-xl border border-[#E5E7EB] bg-white px-3 text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
+                required
+              />
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label for="date-from" class="mb-1 block text-sm font-bold"
+                  >Забрати</label
+                >
+                <input
+                  type="date"
+                  id="date-from"
+                  name="Дата отримання"
+                  class="min-h-[44px] w-full rounded-xl border border-[#E5E7EB] bg-white px-3 text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
+                  required
+                />
+              </div>
+              <div>
+                <label for="date-to" class="mb-1 block text-sm font-bold"
+                  >Повернути</label
+                >
+                <input
+                  type="date"
+                  id="date-to"
+                  name="Дата повернення"
+                  class="min-h-[44px] w-full rounded-xl border border-[#E5E7EB] bg-white px-3 text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
+                  required
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="comment" class="mb-1 block text-sm font-bold"
+                >Коментар
+                <span class="font-normal text-[#595959]"
+                  >(необов'язково)</span
+                ></label
+              >
+              <textarea
+                id="comment"
+                name="Коментар"
+                rows="3"
+                placeholder="Наприклад, зручний час для зустрічі"
+                class="w-full rounded-xl border border-[#E5E7EB] bg-white px-3 py-2 text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
+              ></textarea>
+            </div>
+
+            <div class="space-y-1 rounded-xl bg-[#F4F3EE] p-4 text-sm">
+              <div class="flex justify-between">
+                <span class="text-[#595959]">Оренда</span>
+                <span class="font-bold">450 ₴ за добу</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-[#595959]">Застава (повертається)</span>
+                <span class="font-bold">1000 ₴</span>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="inline-flex min-h-[48px] w-full items-center justify-center rounded-xl bg-[#00E676] px-5 text-base font-bold text-[#121212] shadow-sm transition-all duration-200 ease-in-out hover:bg-[#33EB91] hover:shadow-md active:bg-[#00C853] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
+            >
+              Забронювати
+            </button>
+            <p class="text-center text-xs text-[#595959]">
+              🔒 Оплата та застава холдуються до успішного повернення
+            </p>
+          </form>
         </div>
       </section>
 
-      <!-- Переваги escrow-моделі, верифікації та локального пошуку. -->
+      <!-- Переваги Escrow-моделі. -->
       <section
         id="escrow"
         class="border-y border-[#E5E7EB] bg-white"
@@ -269,9 +329,7 @@
               Орендуй безпечно у своїх сусідів
             </h2>
           </div>
-          <!-- Три ключові переваги сервісу. -->
           <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            <!-- Перевага: безпечне утримання оплати та застави через Escrow. -->
             <article
               class="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm"
             >
@@ -286,7 +344,6 @@
                 Оплата та застава надійно холдуються до успішного повернення.
               </p>
             </article>
-            <!-- Перевага: підтвердження особи та надійність учасників. -->
             <article
               class="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm"
             >
@@ -296,12 +353,11 @@
               >
                 ✓
               </div>
-              <h3 class="text-lg font-bold">Верифікація через Дію</h3>
+              <h3 class="text-lg font-bold">Перевірені сусіди</h3>
               <p class="mt-2 leading-relaxed text-[#595959]">
-                Тільки верифіковані сусіди з підтвердженими профілями.
+                Інструменти здають лише сусіди з підтвердженими профілями.
               </p>
             </article>
-            <!-- Перевага: пошук інструментів у пішій доступності. -->
             <article
               class="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm"
             >
@@ -320,7 +376,7 @@
         </div>
       </section>
 
-      <!-- Медійна демонстрація, яка завантажує YouTube лише після взаємодії. -->
+      <!-- Відео: YouTube вбудовано напряму, без JavaScript. -->
       <section
         id="media-showcase"
         class="border-b border-gray-200 bg-white py-12 sm:py-16"
@@ -345,243 +401,30 @@
             </p>
           </div>
 
-          <!-- Контейнер зберігає співвідношення сторін і показує прев’ю до кліку. -->
           <div
-            id="yt-box"
             class="relative mt-8 aspect-video w-full overflow-hidden rounded-2xl border border-gray-200 bg-neutral-900 shadow-xl"
-            data-id="Xr1AwIcasWs"
           >
-            <button
-              type="button"
-              id="yt-load"
-              class="group absolute inset-0 h-full w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white"
-              aria-label="Відтворити відео про NeighborCraft"
-            >
-              <img
-                src="https://i.ytimg.com/vi/Xr1AwIcasWs/hqdefault.jpg"
-                alt=""
-                width="480"
-                height="360"
-                class="h-full w-full object-cover opacity-80 transition-opacity duration-200 group-hover:opacity-100"
-                loading="lazy"
-                decoding="async"
-              />
-              <span class="absolute inset-0 flex items-center justify-center">
-                <span
-                  class="flex h-16 w-16 items-center justify-center rounded-full bg-[#00E676] text-2xl text-[#121212] shadow-lg"
-                  aria-hidden="true"
-                  >▶</span
-                >
-              </span>
-            </button>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/Xr1AwIcasWs?rel=0"
+              title="Відео про NeighborCraft"
+              class="h-full w-full border-0"
+              loading="lazy"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                picture-in-picture;
+                web-share;
+              "
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
           </div>
         </div>
       </section>
 
-      <!-- Каталог доступних інструментів і фільтри категорій. -->
-      <section
-        id="catalog"
-        class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8"
-        aria-labelledby="catalog-title"
-      >
-        <div
-          class="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between"
-        >
-          <!-- Заголовок каталогу та посилання на карту. -->
-          <div>
-            <p
-              class="mb-2 text-sm font-bold uppercase tracking-wide text-[#176B3A]"
-            >
-              Каталог NeighborCraft
-            </p>
-            <h2 id="catalog-title" class="text-2xl font-bold sm:text-3xl">
-              Інструменти поруч
-            </h2>
-          </div>
-          <a
-            href="#contacts"
-            class="inline-flex min-h-[44px] items-center rounded-xl border border-[#121212] px-4 text-sm font-bold hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
-            >Переглянути мапу →</a
-          >
-        </div>
-        <div
-          class="mt-6 flex gap-2 overflow-x-auto pb-2"
-          role="group"
-          aria-label="Категорії інструментів"
-        >
-          <!-- Фільтри побудовані як якірні посилання та залишаються доступними без JS. -->
-          <a
-            href="#catalog"
-            class="inline-flex min-h-[44px] shrink-0 items-center rounded-full bg-[#121212] px-4 text-sm font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
-            >Усі</a
-          >
-          <a
-            href="#catalog"
-            class="inline-flex min-h-[44px] shrink-0 items-center rounded-full border border-[#E5E7EB] bg-white px-4 text-sm font-semibold hover:border-[#121212] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
-            >Електроінструменти</a
-          >
-          <a
-            href="#catalog"
-            class="inline-flex min-h-[44px] shrink-0 items-center rounded-full border border-[#E5E7EB] bg-white px-4 text-sm font-semibold hover:border-[#121212] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
-            >Вимірювання</a
-          >
-          <a
-            href="#catalog"
-            class="inline-flex min-h-[44px] shrink-0 items-center rounded-full border border-[#E5E7EB] bg-white px-4 text-sm font-semibold hover:border-[#121212] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
-            >Сад і двір</a
-          >
-        </div>
-        <!-- Сітка карток інструментів. -->
-        <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          <!-- Картка перфоратора з ціною, рейтингом і дією бронювання. -->
-          <article
-            class="group flex flex-col rounded-2xl border border-[#E5E7EB] bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
-          >
-            <div class="relative h-52 overflow-hidden rounded-xl bg-[#F4F3EE]">
-              <img
-                src="assets/images/bosch-gbh-2-26.jpg"
-                alt="Перфоратор Bosch GBH 2-26 у чорному кейсі"
-                width="400"
-                height="208"
-                data-tool
-                class="h-full w-full object-contain p-3 transition-transform duration-300 group-hover:scale-105"
-                loading="lazy"
-                decoding="async"
-              />
-              <span
-                class="absolute left-3 top-3 rounded-full bg-[#00E676] px-2.5 py-1 text-xs font-bold"
-                >✓ Верифікація через Дію</span
-              >
-            </div>
-            <div class="flex min-h-[156px] flex-1 flex-col pt-5">
-              <p class="text-xs font-medium text-[#595959] sm:text-sm">
-                Центральний район · 250 м від вас
-              </p>
-              <h3 class="mt-2 text-lg font-bold">Перфоратор Bosch GBH 2-26</h3>
-              <p
-                class="mt-2 text-sm text-[#8A5A00]"
-                role="img"
-                aria-label="Рейтинг: 5 з 5"
-              >
-                ★★★★★
-              </p>
-              <div class="mt-auto border-t border-[#E5E7EB] pt-4">
-                <p class="text-xl font-extrabold">
-                  450 ₴
-                  <span class="text-sm font-normal text-[#595959]">/ доба</span>
-                </p>
-                <p class="mt-1 text-xs text-[#595959]">Застава: 1000 ₴</p>
-                <button
-                  type="button"
-                  class="mt-4 inline-flex min-h-[44px] w-full items-center justify-center rounded-xl bg-[#00E676] px-4 font-bold text-[#121212] shadow-sm transition-all duration-200 ease-in-out hover:bg-[#33EB91] hover:shadow-md active:bg-[#00C853] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
-                >
-                  + Забронювати
-                </button>
-              </div>
-            </div>
-          </article>
-          <!-- Картка лазерного нівеліра з ціною, рейтингом і дією бронювання. -->
-          <article
-            class="group flex flex-col rounded-2xl border border-[#E5E7EB] bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
-          >
-            <div class="relative h-52 overflow-hidden rounded-xl bg-[#F4F3EE]">
-              <img
-                src="assets/images/dewalt-laser-level.png"
-                alt="Жовтий лазерний нівелір DeWalt Laser Level 360"
-                width="400"
-                height="208"
-                data-tool
-                class="h-full w-full object-contain p-3 transition-transform duration-300 group-hover:scale-105"
-                loading="lazy"
-                decoding="async"
-              />
-              <span
-                class="absolute left-3 top-3 rounded-full bg-[#00E676] px-2.5 py-1 text-xs font-bold"
-                >✓ Верифікація через Дію</span
-              >
-            </div>
-            <div class="flex min-h-[156px] flex-1 flex-col pt-5">
-              <p class="text-xs font-medium text-[#595959] sm:text-sm">
-                Північний район · 800 м від вас
-              </p>
-              <h3 class="mt-2 text-lg font-bold">
-                Лазерний нівелір DeWalt Laser Level 360
-              </h3>
-              <p
-                class="mt-2 text-sm text-[#8A5A00]"
-                role="img"
-                aria-label="Рейтинг: 5 з 5"
-              >
-                ★★★★★
-              </p>
-              <div class="mt-auto border-t border-[#E5E7EB] pt-4">
-                <p class="text-xl font-extrabold">
-                  380 ₴
-                  <span class="text-sm font-normal text-[#595959]">/ доба</span>
-                </p>
-                <p class="mt-1 text-xs text-[#595959]">Застава: 1500 ₴</p>
-                <button
-                  type="button"
-                  class="mt-4 inline-flex min-h-[44px] w-full items-center justify-center rounded-xl bg-[#00E676] px-4 font-bold text-[#121212] shadow-sm transition-all duration-200 ease-in-out hover:bg-[#33EB91] hover:shadow-md active:bg-[#00C853] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
-                >
-                  + Забронювати
-                </button>
-              </div>
-            </div>
-          </article>
-          <!-- Картка мийки високого тиску з ціною, рейтингом і дією бронювання. -->
-          <article
-            class="group flex flex-col rounded-2xl border border-[#E5E7EB] bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg"
-          >
-            <div class="relative h-52 overflow-hidden rounded-xl bg-[#F4F3EE]">
-              <img
-                src="assets/images/karcher-pressure-washer.png"
-                alt="Мийка високого тиску Kärcher K5 жовтого кольору"
-                width="400"
-                height="208"
-                data-tool
-                class="h-full w-full object-contain p-3 transition-transform duration-300 group-hover:scale-105"
-                loading="lazy"
-                decoding="async"
-              />
-              <span
-                class="absolute left-3 top-3 rounded-full bg-[#00E676] px-2.5 py-1 text-xs font-bold"
-                >✓ Верифікація через Дію</span
-              >
-            </div>
-            <div class="flex min-h-[156px] flex-1 flex-col pt-5">
-              <p class="text-xs font-medium text-[#595959] sm:text-sm">
-                Західний район · 1.2 км від вас
-              </p>
-              <h3 class="mt-2 text-lg font-bold">
-                Мийка високого тиску Kärcher K5
-              </h3>
-              <p
-                class="mt-2 text-sm text-[#8A5A00]"
-                role="img"
-                aria-label="Рейтинг: 5 з 5"
-              >
-                ★★★★★
-              </p>
-              <div class="mt-auto border-t border-[#E5E7EB] pt-4">
-                <p class="text-xl font-extrabold">
-                  620 ₴
-                  <span class="text-sm font-normal text-[#595959]">/ доба</span>
-                </p>
-                <p class="mt-1 text-xs text-[#595959]">Застава: 2000 ₴</p>
-                <button
-                  type="button"
-                  class="mt-4 inline-flex min-h-[44px] w-full items-center justify-center rounded-xl bg-[#00E676] px-4 font-bold text-[#121212] shadow-sm transition-all duration-200 ease-in-out hover:bg-[#33EB91] hover:shadow-md active:bg-[#00C853] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2"
-                >
-                  + Забронювати
-                </button>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- Послідовність користування сервісом від пошуку до отримання інструмента. -->
+      <!-- Три кроки від бронювання до отримання інструмента. -->
       <section
         id="how-it-works"
         class="bg-[#121212] text-white"
@@ -596,21 +439,19 @@
           <h2 id="steps-title" class="text-2xl font-bold sm:text-3xl">
             Як це працює
           </h2>
-          <!-- Нумеровані кроки зберігають логічний порядок для скринрідерів. -->
           <ol class="mt-8 grid gap-5 sm:grid-cols-3">
             <li class="rounded-2xl border border-white/15 bg-white/5 p-6">
               <span class="text-4xl font-extrabold text-[#00E676]">01</span>
-              <h3 class="mt-5 text-lg font-bold">Обери інструмент</h3>
+              <h3 class="mt-5 text-lg font-bold">Залиш заявку</h3>
               <p class="mt-2 leading-relaxed text-neutral-300">
-                Знайди потрібне обладнання на мапі, переглянь календар
-                доступності та відгуки.
+                Вибери дати та вкажи контакти у формі бронювання.
               </p>
             </li>
             <li class="rounded-2xl border border-white/15 bg-white/5 p-6">
               <span class="text-4xl font-extrabold text-[#00E676]">02</span>
-              <h3 class="mt-5 text-lg font-bold">Забронюй з Escrow</h3>
+              <h3 class="mt-5 text-lg font-bold">Підтверди з Escrow</h3>
               <p class="mt-2 leading-relaxed text-neutral-300">
-                Оплати оренду та заставу. Ми утримуємо кошти, поки інструмент
+                Власник підтвердить бронь, а кошти утримуються, поки інструмент
                 безпечно у тебе.
               </p>
             </li>
@@ -626,7 +467,7 @@
         </div>
       </section>
 
-      <!-- Відгуки користувачів і середня оцінка сервісу. -->
+      <!-- Відгук про цей перфоратор. -->
       <section
         id="reviews"
         class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8"
@@ -655,58 +496,32 @@
             >
           </div>
         </div>
-        <!-- Картки відгуків адаптуються до однієї або двох колонок. -->
-        <div class="mt-8 grid gap-5 md:grid-cols-2">
-          <article
-            class="review-card rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm"
-          >
-            <p class="text-[#8A5A00]" role="img" aria-label="5 зірок">★★★★★</p>
-            <blockquote class="mt-4 leading-relaxed">
-              «Перфоратор NeighborCraft був поруч, тому я швидко зробила ремонт
-              без витрат на купівлю власного інструмента.»
-            </blockquote>
-            <div class="mt-6 flex items-center gap-3">
-              <div
-                class="flex h-10 w-10 items-center justify-center rounded-full bg-[#B7D9BC] font-bold"
-                aria-hidden="true"
-              >
-                ОМ
-              </div>
-              <p class="text-sm font-bold">
-                Олена С.
-                <span class="block font-normal text-[#595959]"
-                  >✓ Перфоратор Bosch GBH 2-26</span
-                >
-              </p>
+        <article
+          class="mt-8 max-w-3xl rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm"
+        >
+          <p class="text-[#8A5A00]" role="img" aria-label="5 зірок">★★★★★</p>
+          <blockquote class="mt-4 leading-relaxed">
+            «Перфоратор був поруч, тому я швидко зробила ремонт без витрат на
+            купівлю власного інструмента.»
+          </blockquote>
+          <div class="mt-6 flex items-center gap-3">
+            <div
+              class="flex h-10 w-10 items-center justify-center rounded-full bg-[#B7D9BC] font-bold"
+              aria-hidden="true"
+            >
+              ОС
             </div>
-          </article>
-          <article
-            class="review-card rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm"
-          >
-            <p class="text-[#8A5A00]" role="img" aria-label="5 зірок">★★★★★</p>
-            <blockquote class="mt-4 leading-relaxed">
-              «Здаю лазерний нівелір через NeighborCraft і отримую пасивний
-              дохід, коли не користуюся ним сам.»
-            </blockquote>
-            <div class="mt-6 flex items-center gap-3">
-              <div
-                class="flex h-10 w-10 items-center justify-center rounded-full bg-[#D9FBE8] font-bold"
-                aria-hidden="true"
+            <p class="text-sm font-bold">
+              Олена С.
+              <span class="block font-normal text-[#595959]"
+                >✓ Перфоратор Bosch GBH 2-26</span
               >
-                АК
-              </div>
-              <p class="text-sm font-bold">
-                Андрій К.
-                <span class="block font-normal text-[#595959]"
-                  >✓ Лазерний нівелір DeWalt Laser Level 360</span
-                >
-              </p>
-            </div>
-          </article>
-        </div>
+            </p>
+          </div>
+        </article>
       </section>
 
-      <!-- Контактна інформація та відкладене завантаження Google Maps. -->
+      <!-- Контакти та мапа: Google Maps вбудовано напряму, без JavaScript. -->
       <section
         id="contacts"
         class="w-full border-t border-gray-200 bg-[#F4F3EE] py-10 sm:py-14 lg:py-20"
@@ -760,36 +575,26 @@
               </address>
             </div>
 
-            <!-- Плейсхолдер карти не створює сторонніх запитів до кліку. -->
             <div
-              id="map-box"
               class="relative h-[300px] w-full min-w-0 overflow-hidden rounded-2xl border border-gray-200 bg-[#DCECDD] shadow-md sm:h-[360px] lg:h-[420px]"
-              data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.080927906954!2d24.012117576882656!3d49.83533863172159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add7b5879a78d%3A0x8e6e58798dc71f8b!2z0LLRg9C7LiDQodGC0LXQv9Cw0L3QsCDQkdCw0L3QtNC10YDQuCwgMTIsINCb0YzQstGW0LIsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzkwMTM!5e0!3m2!1suk!2sua!4v1700000000000!5m2!1suk!2sua"
             >
-              <button
-                type="button"
-                id="map-load"
-                class="absolute inset-0 flex h-full w-full flex-col items-center justify-center gap-3 px-4 text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#121212]"
-              >
-                <span class="text-5xl" aria-hidden="true">🗺️</span>
-                <span
-                  class="inline-flex min-h-[44px] items-center rounded-xl bg-[#00E676] px-5 font-bold text-[#121212] shadow-sm"
-                  >Показати мапу</span
-                >
-                <span class="text-xs text-[#1D382B]"
-                  >Завантажиться Google Maps</span
-                >
-              </button>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.080927906954!2d24.012117576882656!3d49.83533863172159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add7b5879a78d%3A0x8e6e58798dc71f8b!2z0LLRg9C7LiDQodGC0LXQv9Cw0L3QsCDQkdCw0L3QtNC10YDQuCwgMTIsINCb0YzQstGW0LIsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzkwMTM!5e0!3m2!1suk!2sua!4v1700000000000!5m2!1suk!2sua"
+                title="Пункти передачі інструментів NeighborCraft у Львові"
+                class="h-full w-full border-0"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Футер із навігацією, контактами та закликом додати інструмент. -->
+    <!-- Повний футер із навігацією, контактами та закликом додати інструмент. -->
     <footer id="site-footer" class="bg-[#121212] text-neutral-300">
       <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <!-- Чотири інформаційні колонки футера. -->
         <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <a
@@ -810,9 +615,9 @@
             <ul class="space-y-2 text-sm">
               <li>
                 <a
-                  href="#catalog"
+                  href="#booking"
                   class="inline-flex min-h-[44px] items-center hover:text-[#00E676] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#121212]"
-                  >Каталог інструментів</a
+                  >Забронювати перфоратор</a
                 >
               </li>
               <li>
@@ -862,7 +667,6 @@
             >
           </div>
         </div>
-        <!-- Рік авторського права відділений верхньою межею. -->
         <div
           class="mt-12 border-t border-white/15 pt-6 text-xs text-neutral-300"
         >
@@ -870,70 +674,5 @@
         </div>
       </div>
     </footer>
-
-    <!-- Невеликий vanilla JavaScript для fallback-зображень і lazy media. -->
-    <script>
-      // Якщо зображення інструмента не завантажилося, показуємо доступний fallback.
-      (function () {
-        document.querySelectorAll("img[data-tool]").forEach(function (img) {
-          function showFallback() {
-            var box = document.createElement("div");
-            box.className =
-              "flex h-full w-full items-center justify-center text-6xl";
-            box.setAttribute("role", "img");
-            box.setAttribute("aria-label", img.alt);
-            box.textContent = "🛠️";
-            img.replaceWith(box);
-          }
-          if (img.complete && img.naturalWidth === 0 && img.currentSrc) {
-            showFallback();
-          } else {
-            img.addEventListener("error", showFallback);
-          }
-        });
-      })();
-
-      // Google Maps створюється лише після кліку, щоб не завантажувати iframe одразу.
-      (function () {
-        var box = document.getElementById("map-box");
-        var btn = document.getElementById("map-load");
-        if (!box || !btn) return;
-        btn.addEventListener("click", function () {
-          var frame = document.createElement("iframe");
-          frame.src = box.getAttribute("data-src");
-          frame.className = "h-full w-full border-0";
-          frame.title = "Пункти передачі інструментів NeighborCraft у Львові";
-          frame.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
-          frame.setAttribute("allowfullscreen", "");
-          box.replaceChildren(frame);
-        });
-      })();
-
-      // YouTube iframe створюється лише після кліку по прев’ю.
-      (function () {
-        var box = document.getElementById("yt-box");
-        var btn = document.getElementById("yt-load");
-        if (!box || !btn) return;
-        btn.addEventListener("click", function () {
-          var frame = document.createElement("iframe");
-          frame.src =
-            "https://www.youtube-nocookie.com/embed/" +
-            box.getAttribute("data-id") +
-            "?autoplay=1&rel=0";
-          frame.className = "h-full w-full border-0";
-          frame.title = "Відео про NeighborCraft";
-          frame.setAttribute(
-            "allow",
-            "accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share",
-          );
-          frame.setAttribute("allowfullscreen", "");
-          frame.setAttribute(
-            "referrerpolicy",
-            "strict-origin-when-cross-origin",
-          );
-          box.replaceChildren(frame);
-        });
-      })();
-    </script>
   </body>
 </html>
