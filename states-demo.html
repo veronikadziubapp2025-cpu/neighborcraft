@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Стани форми — NeighborCraft</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-[#F4F3EE] font-[Inter,system-ui,sans-serif] text-[#121212]">
+    <main class="mx-auto w-full max-w-4xl px-4 py-8 sm:px-6 sm:py-12">
+      <h1 class="text-2xl font-bold sm:text-3xl">Стани форми зворотного зв'язку</h1>
+      <section class="mt-6 grid grid-cols-1 gap-4 rounded-2xl border border-[#E5E7EB] bg-white p-4 shadow-sm sm:gap-6 sm:p-6 md:grid-cols-2 lg:p-8" aria-label="Стани поля Емейл">
+        <div class="min-w-0">
+          <p class="mb-2 text-sm font-semibold">Normal</p>
+          <label for="email-normal" class="mb-1 block text-sm font-semibold">Емейл</label>
+          <div class="relative">
+            <input id="email-normal" type="email" value="name@example.com" aria-describedby="email-normal-help" class="peer min-h-[48px] w-full rounded-xl border border-[#E5E7EB] bg-white px-4 py-3 pr-10 text-base text-[#121212] transition-colors duration-200 hover:border-[#595959] focus-visible:border-[#121212] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2 aria-[invalid=true]:border-[#B91C1C] data-[valid=true]:border-[#1D382B]" />
+            <svg class="pointer-events-none absolute right-3 top-1/2 hidden h-5 w-5 -translate-y-1/2 text-[#B91C1C] peer-aria-[invalid=true]:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 8v4m0 4h.01" /></svg>
+            <svg class="pointer-events-none absolute right-3 top-1/2 hidden h-5 w-5 -translate-y-1/2 text-[#1D382B] peer-data-[valid=true]:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6" /></svg>
+          </div>
+          <p id="email-normal-help" class="mt-1 text-sm text-[#595959]">Введіть електронну адресу.</p>
+        </div>
+        <div class="min-w-0">
+          <p class="mb-2 text-sm font-semibold">Focus</p>
+          <label for="email-focus" class="mb-1 block text-sm font-semibold">Емейл</label>
+          <div class="relative">
+            <input id="email-focus" type="email" value="name@example.com" aria-describedby="email-focus-help" class="peer min-h-[48px] w-full rounded-xl border border-[#121212] bg-white px-4 py-3 pr-10 text-base text-[#121212] ring-2 ring-[#121212] ring-offset-2 transition-colors duration-200" />
+            <svg class="pointer-events-none absolute right-3 top-1/2 hidden h-5 w-5 -translate-y-1/2 text-[#B91C1C] peer-aria-[invalid=true]:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 8v4m0 4h.01" /></svg>
+            <svg class="pointer-events-none absolute right-3 top-1/2 hidden h-5 w-5 -translate-y-1/2 text-[#1D382B] peer-data-[valid=true]:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6" /></svg>
+          </div>
+          <p id="email-focus-help" class="mt-1 text-sm text-[#595959]">Введіть електронну адресу.</p>
+        </div>
+        <div class="min-w-0">
+          <p class="mb-2 text-sm font-semibold">Error</p>
+          <label for="email-error" class="mb-1 block text-sm font-semibold">Емейл</label>
+          <div class="relative">
+            <input id="email-error" type="email" value="name@" aria-invalid="true" aria-describedby="email-error-help" class="peer min-h-[48px] w-full rounded-xl border border-[#E5E7EB] bg-white px-4 py-3 pr-10 text-base text-[#121212] transition-colors duration-200 hover:border-[#595959] focus-visible:border-[#121212] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2 aria-[invalid=true]:border-[#B91C1C] data-[valid=true]:border-[#1D382B]" />
+            <svg class="pointer-events-none absolute right-3 top-1/2 hidden h-5 w-5 -translate-y-1/2 text-[#B91C1C] peer-aria-[invalid=true]:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 8v4m0 4h.01" /></svg>
+            <svg class="pointer-events-none absolute right-3 top-1/2 hidden h-5 w-5 -translate-y-1/2 text-[#1D382B] peer-data-[valid=true]:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6" /></svg>
+          </div>
+          <p id="email-error-help" class="mt-1 text-sm font-medium text-[#B91C1C]">Введіть коректну електронну адресу.</p>
+        </div>
+        <div class="min-w-0">
+          <p class="mb-2 text-sm font-semibold">Success</p>
+          <label for="email-success" class="mb-1 block text-sm font-semibold">Емейл</label>
+          <div class="relative">
+            <input id="email-success" type="email" value="name@example.com" data-valid="true" aria-describedby="email-success-help" class="peer min-h-[48px] w-full rounded-xl border border-[#E5E7EB] bg-white px-4 py-3 pr-10 text-base text-[#121212] transition-colors duration-200 hover:border-[#595959] focus-visible:border-[#121212] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2 aria-[invalid=true]:border-[#B91C1C] data-[valid=true]:border-[#1D382B]" />
+            <svg class="pointer-events-none absolute right-3 top-1/2 hidden h-5 w-5 -translate-y-1/2 text-[#B91C1C] peer-aria-[invalid=true]:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 8v4m0 4h.01" /></svg>
+            <svg class="pointer-events-none absolute right-3 top-1/2 hidden h-5 w-5 -translate-y-1/2 text-[#1D382B] peer-data-[valid=true]:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6" /></svg>
+          </div>
+          <p id="email-success-help" class="mt-1 hidden text-sm font-medium text-[#B91C1C]">Введіть коректну електронну адресу.</p>
+        </div>
+      </section>
+
+      <section class="mt-6 grid grid-cols-1 gap-4 rounded-2xl border border-[#E5E7EB] bg-white p-4 shadow-sm sm:gap-6 sm:p-6 md:grid-cols-2 lg:p-8" aria-label="Приклади textarea та чекбокса">
+        <div class="min-w-0 md:col-span-2">
+          <p class="mb-2 text-sm font-semibold">Focus</p>
+          <label for="message-focus" class="mb-1 block text-sm font-semibold">Повідомлення</label>
+          <div class="relative">
+            <textarea id="message-focus" rows="4" aria-describedby="message-focus-help" class="peer min-h-[140px] w-full resize-y rounded-xl border border-[#121212] bg-white px-4 py-3 pr-10 text-base text-[#121212] ring-2 ring-[#121212] ring-offset-2 transition-colors duration-200">Текст повідомлення</textarea>
+            <svg class="pointer-events-none absolute right-3 top-1/2 hidden h-5 w-5 -translate-y-1/2 text-[#B91C1C] peer-aria-[invalid=true]:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 8v4m0 4h.01" /></svg>
+            <svg class="pointer-events-none absolute right-3 top-1/2 hidden h-5 w-5 -translate-y-1/2 text-[#1D382B] peer-data-[valid=true]:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6" /></svg>
+          </div>
+          <p id="message-focus-help" class="mt-1 text-sm text-[#595959]">Приклад видимого focus ring.</p>
+        </div>
+        <div class="min-w-0 md:col-span-2">
+          <p class="mb-2 text-sm font-semibold">Success</p>
+          <div class="relative flex min-h-[48px] items-center pr-10">
+            <input id="consent-success" type="checkbox" checked data-valid="true" aria-describedby="consent-success-help" class="peer mr-2 h-4 w-4 shrink-0 rounded border border-[#1D382B] accent-[#00E676] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#121212] focus-visible:ring-offset-2 data-[valid=true]:border-[#1D382B] data-[valid=true]:accent-[#00E676]" />
+            <label for="consent-success" class="text-sm font-semibold text-[#121212]">Погоджуюся з політикою конфіденційності</label>
+            <svg class="pointer-events-none absolute right-3 top-1/2 hidden h-5 w-5 -translate-y-1/2 text-[#B91C1C] peer-aria-[invalid=true]:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 8v4m0 4h.01" /></svg>
+            <svg class="pointer-events-none absolute right-3 top-1/2 hidden h-5 w-5 -translate-y-1/2 text-[#1D382B] peer-data-[valid=true]:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 4 4L19 6" /></svg>
+          </div>
+          <p id="consent-success-help" class="mt-1 hidden text-sm font-medium text-[#B91C1C]">Підтвердьте згоду, щоб надіслати повідомлення.</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

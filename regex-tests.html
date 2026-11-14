@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тести валідації — NeighborCraft</title>
+  </head>
+  <body>
+    <main>
+      <h1>Тести регулярних виразів і підказки телефону</h1>
+      <p>
+        Regex перевіряє телефон у суворому форматі без нормалізації. Підказка
+        виправлення є окремою UX-функцією й не змінює введене значення.
+      </p>
+
+      <h2>Телефон — REGEX_PHONE.test()</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Значення</th>
+            <th scope="col">Очікується</th>
+            <th scope="col">Фактично</th>
+            <th scope="col">Результат</th>
+          </tr>
+        </thead>
+        <tbody id="phone-regex-results"></tbody>
+      </table>
+
+      <h2>Email — REGEX_EMAIL.test()</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Значення</th>
+            <th scope="col">Очікується</th>
+            <th scope="col">Фактично</th>
+            <th scope="col">Результат</th>
+          </tr>
+        </thead>
+        <tbody id="email-regex-results"></tbody>
+      </table>
+
+      <h2>Підказка телефону — suggestPhoneFix()</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Введене значення</th>
+            <th scope="col">Очікувана пропозиція</th>
+            <th scope="col">Фактична пропозиція</th>
+            <th scope="col">Результат</th>
+          </tr>
+        </thead>
+        <tbody id="phone-fix-results"></tbody>
+      </table>
+    </main>
+    <script>
+      // Перевіряє лише суворий формат +380 і дев'ять цифр.
+      const REGEX_PHONE = /^\+380\d{9}$/;
+      // Перевіряє задану структуру email; нормалізація телефону тут не застосовується.
+      const REGEX_EMAIL = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+      // Пропонує форматування лише для телефонів із точною кількістю цифр.
+      function suggestPhoneFix(value) {
+        const cleanedValue = value.replace(/[\s()-]/g, "");
+        if (/^0\d{9}$/.test(cleanedValue)) return `+38${cleanedValue}`;
+        if (/^380\d{9}$/.test(cleanedValue)) return `+${cleanedValue}`;
+        if (/^\+380\d{9}$/.test(cleanedValue)) return cleanedValue;
+        return null;
+      }
+
+      const phoneRegexTests = [
+        ["+380501234567", true],
+        ["0501234567", false],
+        ["+38050123456", false],
+        ["+3805012345678", false],
+        ["+380abc123456", false],
+        ["+380 50 123 45 67", false],
+      ];
+      const emailRegexTests = [
+        ["user@mail.com", true],
+        ["name.surname@mail.ua", true],
+        ["user@", false],
+        ["@example.com", false],
+        ["user@example", false],
+        ["user @example.com", false],
+      ];
+      const phoneFixTests = [
+        ["0501234567", "+380501234567"],
+        ["+380 50 123 45 67", "+380501234567"],
+        ["(050) 123-45-67", "+380501234567"],
+        ["380501234567", "+380501234567"],
+        ["+3805012345678", null],
+        ["+380abc123456", null],
+        ["050123", null],
+      ];
+
+      // Додає результати regex-тестів у відповідну таблицю.
+      function renderRegexTests(tbodyId, tests, regex) {
+        const tbody = document.getElementById(tbodyId);
+        for (const [value, expected] of tests) {
+          const actual = regex.test(value);
+          const row = document.createElement("tr");
+          const cells = [
+            value,
+            expected ? "✓" : "✗",
+            actual ? "✓" : "✗",
+            actual === expected ? "✓" : "✗",
+          ];
+          for (const text of cells) {
+            const cell = document.createElement("td");
+            cell.textContent = text;
+            row.append(cell);
+          }
+          tbody.append(row);
+        }
+      }
+
+      // Додає результати тестів підказки, включно з очікуваним null.
+      function renderPhoneFixTests() {
+        const tbody = document.getElementById("phone-fix-results");
+        for (const [value, expected] of phoneFixTests) {
+          const actual = suggestPhoneFix(value);
+          const row = document.createElement("tr");
+          const cells = [
+            value,
+            expected ?? "null",
+            actual ?? "null",
+            actual === expected ? "✓" : "✗",
+          ];
+          for (const text of cells) {
+            const cell = document.createElement("td");
+            cell.textContent = text;
+            row.append(cell);
+          }
+          tbody.append(row);
+        }
+      }
+
+      renderRegexTests("phone-regex-results", phoneRegexTests, REGEX_PHONE);
+      renderRegexTests("email-regex-results", emailRegexTests, REGEX_EMAIL);
+      renderPhoneFixTests();
+    </script>
+  </body>
+</html>
